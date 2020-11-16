@@ -37,7 +37,6 @@ func UDPConnect(addr string, frameSize uint16) (t *UDPClient, err error) {
 		return
 	}
 
-	t.conn.Write([]byte("hello"))
 	go t.reader()
 	go t.writer()
 
